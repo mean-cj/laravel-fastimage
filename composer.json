@@ -1,5 +1,5 @@
 {
-    "name": "laravel/fastimage",
+    "name": "mean-cj/fastimage",
     "version": "1.0.0",
     "type": "library",
     "description": "Laravel Fastimage Helper Library inspired by tommoor  ",
