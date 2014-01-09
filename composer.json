@@ -21,6 +21,6 @@
         "lib-curl": "*"
     },
     "autoload": {
-        "psr-0": { "Fastimage": "libraries/" }
+        "psr-0": { "FastImage": "libraries/" }
     }
 }
