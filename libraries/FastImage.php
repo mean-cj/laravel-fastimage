@@ -237,4 +237,39 @@ class FastImage
 	{
 		$this->close();
 	}
+	
+	
+	private function CURLranger( $uri )
+	{
+	    $headers = array(
+	    "Range: bytes=0-32768"
+	    );
+	
+	    $curl = curl_init($uri);
+	    curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+	    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+	    $data = curl_exec($curl);
+	    curl_close($curl);
+	    return $data;	
+	}
+	
+	public function curl( $uri )
+	{
+		$raw = $this->CURLranger( $uri );
+		if ( ! $raw ) return false;	
+		
+		try
+		{
+			$im = imagecreatefromstring($raw);
+			$width = imagesx($im);
+			$height = imagesy($im);
+			return array( $width, $height);
+		} catch (Exception $e)
+		{
+			return false;
+		}
+		
+	}
+	
+	
 }
