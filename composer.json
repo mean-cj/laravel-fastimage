@@ -1,0 +1,26 @@
+{
+    "name": "laravel/fastimage",
+    "version": "1.0.0",
+    "type": "library",
+    "description": "Laravel Fastimage Helper Library inspired by tommoor  ",
+    "keywords": ["fastimage","fastimage-laravel", "laravel", "php"],
+    "homepage": "https://github.com/mean-cj/laravel-fastimage",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tom Moor",
+            "homepage": "https://github.com/tommoor/fastimage"
+        },
+        {
+            "name": "Jaroenrat Jannithi",
+            "homepage": "https://github.com/mean-cj/laravel-fastimage"
+        }
+    ],
+    "require": {
+        "php": ">=5.1",
+        "lib-curl": "*"
+    },
+    "autoload": {
+        "psr-0": { "Fastimage": "libraries/" }
+    }
+}
